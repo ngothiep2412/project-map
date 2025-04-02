@@ -134,7 +134,7 @@ class _MapScreenState extends State<MapScreen> {
 
     // Check if the user has arrived at the destination
     if (distanceInMeters < 10000) {
-      // 200 meters threshold
+      // 10000 meters threshold
       setState(() {
         _visitedLocations.add(nextDestination);
         _currentDestinationIndex++;
@@ -360,7 +360,7 @@ class _MapScreenState extends State<MapScreen> {
                             _currentPosition!.latitude,
                             _currentPosition!.longitude,
                           ),
-                          initialZoom: 9,
+                          initialZoom: 12,
                           onPositionChanged:
                               (MapPosition position, bool hasGesture) {
                             if (_isJourneyStarted) {
